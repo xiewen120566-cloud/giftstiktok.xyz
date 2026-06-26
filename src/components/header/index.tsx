@@ -78,13 +78,11 @@ export default function Header({
               opacity: 0.8
             }}
             transition="opacity 0.2s ease"
+            color="white"
+            fontSize="xl"
+            fontWeight="bold"
           >
-            <Image
-              src="/static/Group 116.png"
-              alt={hostname}
-              h="2.8rem"
-              w="auto"
-            />
+            {hostname}
           </Box>
           <Flex
             hideBelow="lg"

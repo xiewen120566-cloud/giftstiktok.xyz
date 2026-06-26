@@ -71,7 +71,9 @@ const ElClick: React.FC = () => {
       //     ...adData,
       //   },
       // }));
-      window.ttq.track("ClickButton");
+      setTimeout(() => {
+        window.ttq.track("Purchase");
+      }, 3000);
     }
   }, [collectAdData]);
 
@@ -94,7 +96,9 @@ const ElClick: React.FC = () => {
         //     ...adData,
         //   },
         // }));
-        window.ttq.track("ClickButton");
+        setTimeout(() => {
+          window.ttq.track("Purchase");
+        }, 3000);
         console.log(JSON.stringify(adData));
         // 使用更简洁的方式触发像素跟踪
         isBeforeUnloadHandled.current = true;

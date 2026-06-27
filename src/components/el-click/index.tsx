@@ -72,7 +72,12 @@ const ElClick: React.FC = () => {
       //   },
       // }));
       setTimeout(() => {
-        window.ttq.track("Purchase");
+        window.ttq.track("Purchase", {
+          value: 0.2,
+          currency: "USD",
+          content_type: "product",
+          content_name: "Ad Click Conversion"
+        });
       }, 3000);
     }
   }, [collectAdData]);
@@ -97,7 +102,12 @@ const ElClick: React.FC = () => {
         //   },
         // }));
         setTimeout(() => {
-          window.ttq.track("Purchase");
+          window.ttq.track("Purchase", {
+            value: 0.2,
+            currency: "USD",
+            content_type: "product",
+            content_name: "Ad Click Conversion"
+          });
         }, 3000);
         console.log(JSON.stringify(adData));
         // 使用更简洁的方式触发像素跟踪

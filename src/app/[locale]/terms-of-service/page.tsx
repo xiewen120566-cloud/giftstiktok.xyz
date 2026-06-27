@@ -50,7 +50,7 @@ export default async function TermsOfServicePage({
             </Text>
 
             <Text fontSize="md" lineHeight="tall">
-              Welcome to <strong>{siteName}</strong>! These terms and conditions outline the rules and regulations for the use of {siteName}'s Website, located at {normalizedBaseUrl}.
+              Welcome to <strong>{siteName}</strong>! These terms and conditions outline the rules and regulations for the use of {siteName}&apos;s Website, located at {normalizedBaseUrl}.
             </Text>
             <Text fontSize="md" lineHeight="tall">
               By accessing this website we assume you accept these terms and conditions. Do not continue to use {siteName} if you do not agree to take all of the terms and conditions stated on this page.

@@ -57,7 +57,7 @@ export default function CookieConsent() {
     >
       <Flex direction="column" gap={3}>
         <Text fontSize="sm" color="gray.300" lineHeight="tall">
-          We use cookies to personalize content, provide social media features, and analyze our traffic. By clicking "Accept", you consent to our use of cookies. 
+          We use cookies to personalize content, provide social media features, and analyze our traffic. By clicking &quot;Accept&quot;, you consent to our use of cookies. 
           {" "}
           <Link 
             href={getTargetHref(locale, "/privacy-policy")} 

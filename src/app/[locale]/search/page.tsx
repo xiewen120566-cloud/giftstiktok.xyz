@@ -103,7 +103,7 @@ export default async function Page({
             ) : (
               <Box py={10} textAlign="center">
                 <Text color="gray.400" fontSize="lg">
-                  No games found for "{query}". Try another search term.
+                  No games found for &quot;{query}&quot;. Try another search term.
                 </Text>
               </Box>
             )}

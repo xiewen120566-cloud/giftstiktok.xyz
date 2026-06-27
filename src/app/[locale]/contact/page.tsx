@@ -50,7 +50,7 @@ export default async function ContactPage({
             </Heading>
             
             <Text fontSize="md" lineHeight="tall">
-              Have a question, feedback, or a business inquiry? We'd love to hear from you! Please fill out the form below or reach out to us directly.
+              Have a question, feedback, or a business inquiry? We&apos;d love to hear from you! Please fill out the form below or reach out to us directly.
             </Text>
 
             <Box mt={4} p={6} bg="gray.750" rounded="xl" border="1px solid" borderColor="gray.600">

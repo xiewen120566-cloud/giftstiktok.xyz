@@ -61,7 +61,7 @@ export default async function PrivacyPolicyPage({
             </Text>
             <Box pl={4}>
               <Text mb={2}>• <strong>Log Files:</strong> Like many other websites, {siteName} makes use of log files. The information inside the log files includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date/time stamp, referring/exit pages, and possibly the number of clicks.</Text>
-              <Text mb={2}>• <strong>Cookies and Web Beacons:</strong> We use cookies to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. This information is used to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information.</Text>
+              <Text mb={2}>• <strong>Cookies and Web Beacons:</strong> We use cookies to store information including visitors&apos; preferences, and the pages on the website that the visitor accessed or visited. This information is used to optimize the users&apos; experience by customizing our web page content based on visitors&apos; browser type and/or other information.</Text>
             </Box>
 
             <Heading as="h2" size="lg" color="white" mt={4}>
@@ -78,7 +78,7 @@ export default async function PrivacyPolicyPage({
               Some of advertisers on our site may use cookies and web beacons. Our advertising partners include Google AdSense and Google Ad Exchange. Each of our advertising partners has their own Privacy Policy for their policies on user data.
             </Text>
             <Text fontSize="md" lineHeight="tall">
-              Third-party ad servers or ad networks uses technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on {siteName}, which are sent directly to users' browser. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on websites that you visit.
+              Third-party ad servers or ad networks uses technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on {siteName}, which are sent directly to users&apos; browser. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on websites that you visit.
             </Text>
             <Text fontSize="md" lineHeight="tall">
               Note that {siteName} has no access to or control over these cookies that are used by third-party advertisers.
@@ -91,9 +91,9 @@ export default async function PrivacyPolicyPage({
               Under the CCPA, among other rights, California consumers have the right to:
             </Text>
             <Box pl={4}>
-              <Text mb={2}>• Request that a business that collects a consumer's personal data disclose the categories and specific pieces of personal data that a business has collected about consumers.</Text>
+              <Text mb={2}>• Request that a business that collects a consumer&apos;s personal data disclose the categories and specific pieces of personal data that a business has collected about consumers.</Text>
               <Text mb={2}>• Request that a business delete any personal data about the consumer that a business has collected.</Text>
-              <Text mb={2}>• Request that a business that sells a consumer's personal data, not sell the consumer's personal data.</Text>
+              <Text mb={2}>• Request that a business that sells a consumer&apos;s personal data, not sell the consumer&apos;s personal data.</Text>
             </Box>
             <Text fontSize="md" lineHeight="tall">
               If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.
@@ -118,7 +118,7 @@ export default async function PrivacyPolicyPage({
             </Text>
 
             <Heading as="h2" size="lg" color="white" mt={4}>
-              Children's Information
+              Children&apos;s Information
             </Heading>
             <Text fontSize="md" lineHeight="tall">
               Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.

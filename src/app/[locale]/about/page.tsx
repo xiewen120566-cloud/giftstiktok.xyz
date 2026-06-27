@@ -54,7 +54,7 @@ export default async function AboutPage({
               What We Offer
             </Heading>
             <Text fontSize="md" lineHeight="tall">
-              We carefully curate the best games across various categories including Action, Puzzle, Arcade, Racing, and more. Whether you're looking for a quick brain-teaser during your break or an immersive adventure to spend hours on, we have something for everyone.
+              We carefully curate the best games across various categories including Action, Puzzle, Arcade, Racing, and more. Whether you&apos;re looking for a quick brain-teaser during your break or an immersive adventure to spend hours on, we have something for everyone.
             </Text>
 
             <Heading as="h2" size="lg" color="white" mt={4}>

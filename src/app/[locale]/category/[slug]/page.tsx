@@ -63,7 +63,7 @@ export default async function Page({
     <Box bg="gray.900" minH="100vh">
       <Header categories={categories} hostname={hostname} />
       <Container maxWidth="container.xl" px={{ base: 3, md: 4, lg: 6 }} py={{ base: 4, md: 6 }}>
-                <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center">
+        <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center">
           <ElTemplate
             divId="div-gpt-ad-1782614717055-0"
             adUnitPath="/23358451472/.22"
@@ -72,6 +72,15 @@ export default async function Page({
             minHeight={100}
             style={{ marginBottom: '8px' }}
           />
+          {categoryByGames[0] && (
+            <Box w={{ base: "320px", md: "100%" }} maxW="728px" mb="8px">
+              <GameItem
+                data={categoryByGames[0]}
+                locale={locale}
+                channel={searchParams?.channel}
+              />
+            </Box>
+          )}
           <ElTemplate
             divId="div-gpt-ad-1782614717055-1"
             adUnitPath="/23358451472/.22"
@@ -101,7 +110,7 @@ export default async function Page({
                 columnGap: { base: 3, md: 4, lg: 5 },
               }}
             >
-              {categoryByGames.map((item, index) => (
+              {categoryByGames.slice(1).map((item, index) => (
                 <Box key={`${item?.id ?? "game"}-${index}`} sx={{ breakInside: "avoid", mb: { base: 3, md: 4, lg: 5 } }}>
                   <GameItem
                     data={item}

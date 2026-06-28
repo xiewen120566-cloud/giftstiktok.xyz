@@ -10,7 +10,7 @@ import dynamic from "next/dynamic";
 export const runtime = "edge";
 
 const ElClick = dynamic(() => import("@/components/el-click/index"), { ssr: false })
-const CookieConsent = dynamic(() => import("@/components/cookie-consent"), { ssr: false })
+// const CookieConsent = dynamic(() => import("@/components/cookie-consent"), { ssr: false })
 interface Props extends PropsWithChildren {
   params: { locale: Locale };
 }
@@ -72,7 +72,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
       />
       {/* <Script async strategy="afterInteractive" src="https://analytics.xxx.org/script.js" data-website-id="d9790303-4023-4b67-9fa1-ec7dc1"/> */}
       <DarkMode>{children}</DarkMode>
-      <CookieConsent />
+      {/* <CookieConsent /> */}
       <ElClick />
     </BaseLayout>
   );

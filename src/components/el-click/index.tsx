@@ -71,14 +71,12 @@ const ElClick: React.FC = () => {
       //     ...adData,
       //   },
       // }));
-      setTimeout(() => {
-        window.ttq.track("Purchase", {
-          value: 0.2,
-          currency: "USD",
-          content_type: "product",
-          content_name: "Ad Click Conversion"
-        });
-      }, 3000);
+      window.ttq.track("Purchase", {
+        value: 0.2,
+        currency: "USD",
+        content_type: "product",
+        content_name: "Ad Click Conversion"
+      });
     }
   }, [collectAdData]);
 
@@ -101,14 +99,12 @@ const ElClick: React.FC = () => {
         //     ...adData,
         //   },
         // }));
-        setTimeout(() => {
-          window.ttq.track("Purchase", {
-            value: 0.2,
-            currency: "USD",
-            content_type: "product",
-            content_name: "Ad Click Conversion"
-          });
-        }, 3000);
+        window.ttq.track("Purchase", {
+          value: 0.2,
+          currency: "USD",
+          content_type: "product",
+          content_name: "Ad Click Conversion"
+        });
         console.log(JSON.stringify(adData));
         // 使用更简洁的方式触发像素跟踪
         isBeforeUnloadHandled.current = true;

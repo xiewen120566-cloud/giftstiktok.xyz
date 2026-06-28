@@ -31,9 +31,9 @@ export default async function LocaleLayout({
         crossOrigin="anonymous"
         strategy="beforeInteractive"
       />
-      {/* <Script
+      <Script
         async
-        src="https://www.googletagmanager.com/gtag/js?id=G-0FKCXR93S2"
+        src="https://www.googletagmanager.com/gtag/js?id=G-KGX1FPMCD5"
         crossOrigin="anonymous"
         strategy="beforeInteractive"
       />
@@ -48,10 +48,10 @@ export default async function LocaleLayout({
             window.dataLayer.push(arguments)
           }
           gtag('js', new Date());
-          gtag('config', 'G-0FKCXR93S2')
+          gtag('config', 'G-KGX1FPMCD5')
           `,
         }}
-      /> */}
+      />
       {/* ttq 像素追踪  */}
       <Script
         id="tiktok-pixel-javascript"

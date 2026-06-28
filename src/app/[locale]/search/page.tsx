@@ -60,13 +60,23 @@ export default async function Page({
     <Box bg="gray.900" minH="100vh">
       <Header categories={categories} hostname={hostname} />
       <Container maxWidth="container.xl" px={{ base: 3, md: 4, lg: 6 }} py={{ base: 4, md: 6 }}>
-        <ElTemplate
-          divId="div-gpt-ad-1782456268739-0"
-          adUnitPath="/23358451472/.22"
-          sizes={[[320, 100], [300, 50], [300, 100], [320, 50]]}
-          minWidth={300}
-          minHeight={50}
-        />
+                <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center">
+          <ElTemplate
+            divId="div-gpt-ad-1782614717055-0"
+            adUnitPath="/23358451472/.22"
+            sizes={[[320, 100], [320, 50]]}
+            minWidth={320}
+            minHeight={100}
+            style={{ marginBottom: '8px' }}
+          />
+          <ElTemplate
+            divId="div-gpt-ad-1782614717055-1"
+            adUnitPath="/23358451472/.22"
+            sizes={[[320, 50], [320, 100]]}
+            minWidth={320}
+            minHeight={50}
+          />
+        </Box>
         <VStack alignItems="stretch" gap={{ base: 8, md: 12 }} mt={6}>
           <Box>
             <Flex alignItems="center" gap={3} mb={6}>

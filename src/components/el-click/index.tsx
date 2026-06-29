@@ -3,6 +3,17 @@
 import { debounce } from "lodash";
 import React, { useCallback, useEffect, useRef, useMemo } from "react";
 
+type AdClickData = {
+  adContainerId: string;
+  googleQueryId: string | null;
+  adClickTime: number;
+  publisherId?: string | null;
+  adk?: string | null;
+  adf?: string | null;
+  slotname?: string | null;
+  adSize?: string | null;
+};
+
 // 自定义的 useEffectEvent 钩子，用于添加和移除事件监听器
 function useEffectEvent(eventType: string, callback: (event: Event) => void) {
   useEffect(() => {
@@ -16,6 +27,7 @@ function useEffectEvent(eventType: string, callback: (event: Event) => void) {
 const ElClick: React.FC = () => {
   const isBlurTriggered = useRef<boolean>(false);
   const isBeforeUnloadHandled = useRef<boolean>(false);
+  const pendingAdDataRef = useRef<AdClickData | null>(null);
 
   const collectAdData = useCallback(() => {
     try {
@@ -61,7 +73,7 @@ const ElClick: React.FC = () => {
   }, []);
 
   const trackAdClick = useCallback(() => {
-    const adData = collectAdData();
+    const adData = pendingAdDataRef.current ?? collectAdData();
     if (adData) {
       // window.umami.track((props) => ({
       //   ...props,
@@ -77,6 +89,7 @@ const ElClick: React.FC = () => {
         content_type: "product",
         content_name: "Ad Click Conversion"
       });
+      pendingAdDataRef.current = null;
     }
   }, [collectAdData]);
 
@@ -88,7 +101,7 @@ const ElClick: React.FC = () => {
   const handleBeforeUnload = useCallback(
     () => {
       if (isBeforeUnloadHandled.current) return;
-      const adData = collectAdData();
+      const adData = pendingAdDataRef.current ?? collectAdData();
       if (adData) {
         // 上报数据
         // window.umami.track((props) => ({
@@ -108,6 +121,7 @@ const ElClick: React.FC = () => {
         console.log(JSON.stringify(adData));
         // 使用更简洁的方式触发像素跟踪
         isBeforeUnloadHandled.current = true;
+        pendingAdDataRef.current = null;
       }
     },
     [collectAdData]
@@ -116,12 +130,13 @@ const ElClick: React.FC = () => {
   const handleBlur = useCallback(() => {
     const activeElement = document.activeElement as HTMLIFrameElement | null;
     if (activeElement?.tagName === "IFRAME") {
+      pendingAdDataRef.current = collectAdData();
       isBlurTriggered.current = true;
       setTimeout(() => {
         isBlurTriggered.current = false;
       }, 300);
     }
-  }, []);
+  }, [collectAdData]);
 
   const handleVisibilityChange = useCallback(
     () => {

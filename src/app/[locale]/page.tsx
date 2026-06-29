@@ -1,3 +1,5 @@
+ 
+
 export const runtime = "edge";
 
 import { getCategories, getGames } from "@/actions";
@@ -18,9 +20,7 @@ import Info from "@/components/info";
 import { getTranslations } from "next-intl/server";
 import GameItem from "@/components/game-item";
 import { FaChevronRight } from "react-icons/fa6";
-
-const ElTemplate = dynamic(() => import("@/components/el-temlplate"), { ssr: false });
-
+const ElTemplate = dynamic(() => import("@/components/el-temlplate"), { ssr: false })
 interface Props {
   params: {
     locale: Locale;
@@ -47,8 +47,8 @@ export default async function Page({
 
   const newGames = randomGames(allGames.length, 8).map((item) => allGames[item]);
   const topGames = randomGames(allGames.length, 8).map((item) => allGames[item]);
-  const adInsertedGame = newGames[Math.floor(Math.random() * newGames.length)];
-
+  const adInsertedGame = randomGames(allGames.length, 1).map((item) => allGames[item])[0];
+  
   return (
     <Box bg="gray.900" minH="100vh">
       <Header hostname={hostname} categories={categories} />
@@ -64,7 +64,7 @@ export default async function Page({
             sizes={[[320, 100], [320, 50]]}
             minWidth={320}
             minHeight={100}
-            style={{ marginBottom: "8px" }}
+            style={{ marginBottom: '8px' }}
           />
           {adInsertedGame && (
             <Box w={{ base: "320px", md: "100%" }} maxW="728px" mb="8px">
@@ -119,7 +119,7 @@ export default async function Page({
               ))}
             </Box>
           </Box>
-
+          
           <Box>
             <Flex
               alignItems="center"
@@ -225,7 +225,7 @@ export default async function Page({
               </Box>
             );
           })}
-
+          
           <Box
             bg="gray.800"
             rounded={{ base: "xl", md: "2xl" }}
